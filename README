@@ -1,0 +1,18 @@
+Stick things you want to be symlinked into your home directory in "home". A
+basic .vimrc, which has pathogen.vim already set up, is there for an example.
+
+Clone it to your system:
+
+$ git clone your-server:dotfiles.git ~/.dotfiles
+
+Run apply.sh:
+
+$ . ~/.dotfiles/apply.sh
+
+You can use submodules to keep track of updates from upstream configurations and
+other various modules. For instance, to set up sensible.vim, you could run this
+(from your base dotfiles repo):
+
+$ git submodule add https://github.com/tpope/vim-sensible.git vim/bundle/vim-sensible
+
+apply.sh will update your repo and its submodules each time.
